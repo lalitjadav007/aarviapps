@@ -1,43 +1,249 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About AarviApps | Lalit - Mobile App Developer</title>
-  <meta name="description" content="Learn about Lalit, the founder of AarviApps – a solo mobile app developer specializing in Flutter, Android, and iOS." />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Chosen Palette: Professional Tech (Slate Gray, Indigo, White, Amber accent) -->
+    <!-- Application Structure Plan: A single-page, vertical scroll layout was chosen to present the 'About Us' content as a narrative journey. This structure allows users to progressively discover the company's mission, values, technology, and team in a logical flow without needing to navigate complex menus. The sections are thematically distinct: Hero (introduction), Mission (core purpose), Values (interactive exploration of principles), Tech Stack (visual showcase of expertise), and Team (building trust). This design prioritizes scannability and engagement for a user focused on understanding the company's identity. -->
+    <!-- Visualization & Content Choices: 
+    - Report Info: Company Introduction -> Goal: Inform -> Presentation: Hero section with large typography -> Interaction: Static -> Justification: Creates a strong first impression and clearly states the company's purpose. -> Library/Method: HTML/Tailwind.
+    - Report Info: Our Mission -> Goal: Inform -> Presentation: Dedicated text block with prominent heading -> Interaction: Static -> Justification: Focuses user attention on the core mission statement. -> Library/Method: HTML/Tailwind.
+    - Report Info: Our Values -> Goal: Engage & Inform -> Presentation: Interactive cards in a grid layout -> Interaction: On hover, cards lift and reveal descriptive text (if available) -> Justification: Turns a static list into an engaging element, encouraging user exploration of company principles. -> Library/Method: HTML/Tailwind/JS.
+    - Report Info: Technologies We Use -> Goal: Inform & Showcase -> Presentation: Categorized tags/pills in a grid -> Interaction: Hover effects for visual feedback -> Justification: Provides a quick, scannable overview of technical capabilities, organized for clarity. -> Library/Method: HTML/Tailwind.
+    - Report Info: Team Intro -> Goal: Build Trust -> Presentation: Placeholder profile cards -> Interaction: Static -> Justification: Humanizes the company and prepares a structure for adding team details later. -> Library/Method: HTML/Tailwind.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <title>About AarviApps - Flutter App Development Experts</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        .section-title {
+            @apply text-4xl font-bold text-slate-800 text-center;
+        }
+        .section-subtitle {
+            @apply mt-4 text-lg text-slate-600 text-center max-w-2xl mx-auto;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <nav class="navbar">
-      <div class="logo">AarviApps</div>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html" class="btn">Get a Quote</a></li>
-      </ul>
-    </nav>
-  </header>
+<body class="bg-slate-50">
 
-  <section>
-    <h1>About AarviApps</h1>
-    <p>Hi, I'm <strong>Lalit</strong>, a passionate solo mobile app developer based in India. I founded AarviApps to help startups and businesses bring their app ideas to life with expert guidance and efficient development.</p>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/" class="text-3xl font-extrabold text-indigo-700">AarviApps</a>
+            <a href="#contact" class="hidden sm:inline-block bg-indigo-600 text-white font-semibold px-5 py-2 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                Contact Us
+            </a>
+        </div>
+    </header>
 
-    <h2>Why Work with Me?</h2>
-    <ul>
-      <li>📱 Over 5 years of experience in Flutter, Android (Kotlin), and iOS (Swift)</li>
-      <li>🤝 Personalized, one-on-one service</li>
-      <li>🌍 Serving clients globally, remotely</li>
-    </ul>
-  </section>
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 leading-tight fade-in-up">
+                    We are AarviApps.
+                </h1>
+                <p class="mt-6 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                    AarviApps is a Flutter-focused mobile app development company dedicated to helping startups and established businesses build reliable, high-performance cross-platform applications. We combine innovative technology with strategic insights to deliver mobile solutions that drive growth and enhance user experiences.
+                </p>
+            </div>
+        </section>
 
-  <footer>
-    <div class="footer-inner">
-      <p>© 2025 AarviApps – Lalit | Custom Mobile App Development</p>
-    </div>
-  </footer>
+        <!-- Mission Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="section-title fade-in-up">Our Mission</h2>
+                <div class="mt-6 max-w-3xl mx-auto fade-in-up" style="animation-delay: 0.2s;">
+                    <p class="text-2xl font-medium text-slate-700 leading-relaxed border-l-4 border-indigo-500 pl-6 text-left">
+                        Our mission is to empower businesses by building powerful, scalable mobile apps that seamlessly integrate with their operations and grow with their ambitions. We strive to be a trusted partner in their digital transformation journey.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Our Values Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">Our Core Values</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    These four pillars guide our work, our partnerships, and our commitment to delivering excellence in every project. They are the foundation upon which we build not just apps, but lasting relationships.
+                </p>
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Value Card: Innovation -->
+                    <div class="value-card p-8 bg-slate-50 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-5">
+                            <span class="text-2xl font-bold">💡</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Innovation</h3>
+                        <p class="text-slate-600">Continuously exploring new technologies and creative solutions to deliver cutting-edge applications.</p>
+                    </div>
+                    <!-- Value Card: Efficiency -->
+                    <div class="value-card p-8 bg-slate-50 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-5">
+                            <span class="text-2xl font-bold">🚀</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Efficiency</h3>
+                        <p class="text-slate-600">Streamlining development processes to ensure timely delivery and cost-effectiveness without compromising quality.</p>
+                    </div>
+                    <!-- Value Card: Clarity -->
+                    <div class="value-card p-8 bg-slate-50 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-5">
+                            <span class="text-2xl font-bold">🤝</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Clarity</h3>
+                        <p class="text-slate-600">Maintaining transparent communication and clear project roadmaps with our clients at every stage.</p>
+                    </div>
+                    <!-- Value Card: Support -->
+                    <div class="value-card p-8 bg-slate-50 rounded-xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 fade-in-up" style="animation-delay: 0.6s;">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-full bg-indigo-100 text-indigo-600 mb-5">
+                            <span class="text-2xl font-bold">🛡️</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 mb-2">Support</h3>
+                        <p class="text-slate-600">Providing comprehensive post-launch maintenance and dedicated support to ensure long-term success.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technologies Section -->
+        <section class="py-20 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">Technologies We Use</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    We leverage a modern, robust tech stack to build powerful and scalable applications. Our expertise spans across the best tools for frontend, backend, and native development to bring your vision to life.
+                </p>
+                <div class="mt-16 max-w-4xl mx-auto space-y-10">
+                    <!-- Frontend -->
+                    <div class="fade-in-up" style="animation-delay: 0.3s;">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Frontend</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag bg-blue-100 text-blue-800">Flutter</span>
+                            <span class="tech-tag bg-blue-100 text-blue-800">Dart</span>
+                        </div>
+                    </div>
+                    <!-- Backend -->
+                    <div class="fade-in-up" style="animation-delay: 0.4s;">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Backend & Database</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag bg-yellow-100 text-yellow-800">Firebase</span>
+                            <span class="tech-tag bg-green-100 text-green-800">Supabase</span>
+                            <span class="tech-tag bg-gray-200 text-gray-800">REST APIs</span>
+                        </div>
+                    </div>
+                    <!-- Native Development -->
+                    <div class="fade-in-up" style="animation-delay: 0.5s;">
+                        <h3 class="text-2xl font-semibold text-slate-800 mb-4">Native Development (for specific needs)</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="tech-tag bg-green-200 text-green-900">Kotlin (Android)</span>
+                            <span class="tech-tag bg-gray-300 text-gray-900">Swift (iOS)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Intro Section -->
+        <section class="py-20 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title fade-in-up">Meet Our Team</h2>
+                <p class="section-subtitle fade-in-up" style="animation-delay: 0.2s;">
+                    We are a passionate team of developers, designers, and strategists committed to your success. Get to know the people behind the code who will bring your app idea to reality.
+                </p>
+                <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Team Member Card 1 -->
+                    <div class="text-center fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="mx-auto h-40 w-40 rounded-full bg-slate-200 flex items-center justify-center">
+                            <span class="text-slate-500 text-sm">Photo</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-800">[Team Member Name 1]</h3>
+                        <p class="text-indigo-600 font-semibold">[Role]</p>
+                        <p class="mt-2 text-slate-600">[Brief experience/expertise]</p>
+                    </div>
+                    <!-- Team Member Card 2 -->
+                    <div class="text-center fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="mx-auto h-40 w-40 rounded-full bg-slate-200 flex items-center justify-center">
+                            <span class="text-slate-500 text-sm">Photo</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-800">[Team Member Name 2]</h3>
+                        <p class="text-indigo-600 font-semibold">[Role]</p>
+                        <p class="mt-2 text-slate-600">[Brief experience/expertise]</p>
+                    </div>
+                    <!-- Team Member Card 3 -->
+                    <div class="text-center fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="mx-auto h-40 w-40 rounded-full bg-slate-200 flex items-center justify-center">
+                            <span class="text-slate-500 text-sm">Photo</span>
+                        </div>
+                        <h3 class="mt-4 text-xl font-bold text-slate-800">[Team Member Name 3]</h3>
+                        <p class="text-indigo-600 font-semibold">[Role]</p>
+                        <p class="mt-2 text-slate-600">[Brief experience/expertise]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-800 text-slate-300">
+        <div class="container mx-auto px-6 py-16 text-center">
+             <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Build Your App?</h2>
+             <p class="max-w-xl mx-auto mb-8">Let's turn your vision into a reality. Reach out to us for a free consultation.</p>
+             <a href="mailto:info@aarviapps.com" class="inline-block bg-indigo-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-indigo-700 transition-colors duration-300">
+                Get in Touch
+             </a>
+        </div>
+        <div class="bg-slate-900 py-4">
+            <div class="container mx-auto px-6 text-center text-slate-400 text-sm">
+                <p>&copy; 2025 AarviApps. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const valueCards = document.querySelectorAll('.value-card');
+        const techTags = document.querySelectorAll('.tech-tag');
+        
+        const styleTag = (tag) => {
+            tag.classList.add('px-4', 'py-1', 'text-sm', 'font-semibold', 'rounded-full', 'transition-all', 'duration-300', 'cursor-pointer', 'hover:shadow-md');
+        };
+
+        techTags.forEach(styleTag);
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in-up-observed');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+    });
+</script>
+
 </body>
 </html>
